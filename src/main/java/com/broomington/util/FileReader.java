@@ -13,7 +13,7 @@ public class FileReader {
         throw new IllegalStateException("Utility class");
     }
 
-    public static <T> String getInput(T instance) throws IOException, ClassNotFoundException {
+    public static <T> String getInput(T instance) throws IOException {
         Class<?> clazz = instance.getClass();
         final InputStream inputStream = clazz.getClassLoader().getResourceAsStream(format("%s-input.txt", clazz.getSimpleName()));
 
