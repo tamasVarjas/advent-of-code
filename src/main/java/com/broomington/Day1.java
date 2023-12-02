@@ -11,18 +11,18 @@ import static java.lang.String.format;
 
 public class Day1 {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(final String[] args) throws IOException {
         final Day1 day1 = new Day1();
         final String input = getInput(day1);
 
-        int sum1 = day1.getSum(input, Part.ONE);
-        int sum2 = day1.getSum(input, Part.TWO);
+        final int sum1 = day1.getSum(input, Part.ONE);
+        final int sum2 = day1.getSum(input, Part.TWO);
 
         System.out.println(sum1);
         System.out.println(sum2);
     }
 
-    private int getSum(String input, Part part) {
+    private int getSum(final String input, final Part part) {
         final String finalInput = part == Part.ONE ?
                 input :
                 input
@@ -41,7 +41,7 @@ public class Day1 {
                 .map(chars -> {
                     int first = Integer.MIN_VALUE;
                     int last = Integer.MIN_VALUE;
-                    for (char ch : chars) {
+                    for (final char ch : chars) {
                         if (isDigit(ch)) {
                             if (first == Integer.MIN_VALUE) {
                                 first = Character.getNumericValue(ch);

@@ -40,27 +40,25 @@ public class Day2 {
                 final Pattern pattern = Pattern.compile(nrRegex);
                 for (final String ball : balls) {
                     final Matcher matcher = pattern.matcher(ball);
-                    if (ball.contains("red")) {
-                        if (matcher.find()) {
-                            final int redInSample = Integer.parseInt(matcher.group(1));
-                            red = Math.max(redInSample, red);
-                        }
-                    } else if (ball.contains("blue")) {
-                        if (matcher.find()) {
-                            final int blueInSample = Integer.parseInt(matcher.group(1));
-                            blue = Math.max(blueInSample, blue);
-                        } else blue += 0;
-                    } else if (ball.contains("green")) {
-                        if (matcher.find()) {
-                            final int greenInSample = Integer.parseInt(matcher.group(1));
-                            green = Math.max(greenInSample, green);
-                        }
+                    if (ball.contains("red") && matcher.find()) {
+                        final int redInSample = Integer.parseInt(matcher.group(1));
+                        red = Math.max(redInSample, red);
+                    } else if (ball.contains("blue") && matcher.find()) {
+                        final int blueInSample = Integer.parseInt(matcher.group(1));
+                        blue = Math.max(blueInSample, blue);
+                    } else if (ball.contains("green") && matcher.find()) {
+                        final int greenInSample = Integer.parseInt(matcher.group(1));
+                        green = Math.max(greenInSample, green);
                     }
                 }
             }
-            sum += red <= MAX_RED && blue <= MAX_BLUE && green <= MAX_GREEN ? gameId : 0;
+            if (part == Part.ONE) {
+                sum += red <= MAX_RED && blue <= MAX_BLUE && green <= MAX_GREEN ? gameId : 0;
+            } else if (part == Part.TWO) {
+                sum += red * blue * green;
+            }
         }
-        return sum;
 
+        return sum;
     }
 }
