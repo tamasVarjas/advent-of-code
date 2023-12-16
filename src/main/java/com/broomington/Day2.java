@@ -15,14 +15,13 @@ public class Day2 {
     public static final int MAX_GREEN = 13;
 
     public static void main(final String[] args) throws IOException {
-        final Day2 day2 = new Day2();
-        final String input = getInput(day2);
+        final String input = getInput(Day2.class);
 
-        System.out.println(day2.getSumOfPossibleGameIds(input, Part.ONE));
-        System.out.println(day2.getSumOfPossibleGameIds(input, Part.TWO));
+        System.out.println(getSumOfPossibleGameIds(input, Part.ONE));
+        System.out.println(getSumOfPossibleGameIds(input, Part.TWO));
     }
 
-    private int getSumOfPossibleGameIds(final String input, final Part part) {
+    private static int getSumOfPossibleGameIds(final String input, final Part part) {
         final String gameRegex = "Game\\s([1-9]|[1-9][0-9]|100):";
 
         int sum = 0;

@@ -12,17 +12,13 @@ import static java.lang.String.format;
 public class Day1 {
 
     public static void main(final String[] args) throws IOException {
-        final Day1 day1 = new Day1();
-        final String input = getInput(day1);
+        final String input = getInput(Day1.class);
 
-        final int sum1 = day1.getSum(input, Part.ONE);
-        final int sum2 = day1.getSum(input, Part.TWO);
-
-        System.out.println(sum1);
-        System.out.println(sum2);
+        System.out.println(getSum(input, Part.ONE));
+        System.out.println(getSum(input, Part.TWO));
     }
 
-    private int getSum(final String input, final Part part) {
+    private static int getSum(final String input, final Part part) {
         final String finalInput = part == Part.ONE ?
                 input :
                 input

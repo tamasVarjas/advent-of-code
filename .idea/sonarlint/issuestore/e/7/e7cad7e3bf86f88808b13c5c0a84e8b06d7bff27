@@ -1,0 +1,7 @@
+
+?	java:S106"+Replace this use of System.out by a logger.(œ÷ý
+?	java:S106"+Replace this use of System.out by a logger.(‰¼²m
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(Ô¿»žûÿÿÿÿ
+W
+java:S6353"<Use concise character class syntax '\\d' instead of '[0-9]'.(µŠ¦ÿÿÿÿÿ

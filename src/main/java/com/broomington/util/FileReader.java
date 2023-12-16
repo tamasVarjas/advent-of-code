@@ -13,16 +13,15 @@ public class FileReader {
         throw new IllegalStateException("Utility class");
     }
 
-    public static <T> String getInput(T instance) throws IOException {
-        Class<?> clazz = instance.getClass();
+    public static String getInput(final Class<?> clazz) throws IOException {
         final InputStream inputStream = clazz.getClassLoader().getResourceAsStream(format("%s-input.txt", clazz.getSimpleName()));
 
         return readFromInputStream(inputStream);
     }
 
-    private static String readFromInputStream(InputStream inputStream) throws IOException {
+    private static String readFromInputStream(final InputStream inputStream) throws IOException {
         final StringBuilder sb = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+        try (final BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
             String line;
             while ((line = br.readLine()) != null) {
                 sb.append(line).append("\n");
