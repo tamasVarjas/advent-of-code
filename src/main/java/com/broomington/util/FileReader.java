@@ -13,8 +13,8 @@ public class FileReader {
         throw new IllegalStateException("Utility class");
     }
 
-    public static String getInput(final Class<?> clazz) throws IOException {
-        final InputStream inputStream = clazz.getClassLoader().getResourceAsStream(format("%s-input.txt", clazz.getSimpleName()));
+    public static String getInput(final int year, final Class<?> clazz) throws IOException {
+        final InputStream inputStream = clazz.getClassLoader().getResourceAsStream(format("%d/%s-input.txt", year, clazz.getSimpleName()));
 
         return readFromInputStream(inputStream);
     }

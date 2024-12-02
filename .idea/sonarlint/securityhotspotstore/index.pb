@@ -25,3 +25,7 @@ Q.idea/sonarlint/securityhotspotstore/7/e/7eecdc0cdbb65899b35f111a8f910f08d0febb
 Q.idea/sonarlint/securityhotspotstore/e/7/e7cad7e3bf86f88808b13c5c0a84e8b06d7bff27,1\7\170cd6a80ae0b0701188d344ff1a267a5051ea75
 Å
 Q.idea/sonarlint/securityhotspotstore/e/3/e3c2f391c283414100c8e35b741a1d36df5065d2,6\9\693f77a8fcb121d810718f3b205ded6babbace69
+W
+'src/main/java/com/broomington/Day4.java,9\5\9525ee6d72303209a1365f60761b42f3be342d81
+W
+'src/main/java/com/broomington/Day8.java,b\a\bacb7b0fe19358279306fa80401c924e6dfe176b

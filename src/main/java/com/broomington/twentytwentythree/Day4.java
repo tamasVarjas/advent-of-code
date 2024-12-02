@@ -1,4 +1,4 @@
-package com.broomington;
+package com.broomington.twentytwentythree;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import static com.broomington.util.FileReader.getInput;
 public class Day4 {
 
     public static void main(final String[] args) throws IOException {
-        final String input = getInput(Day4.class);
+        final String input = getInput(2023, Day4.class);
 
         System.out.println(calculatePoints(getCards(input)));
         System.out.println(calculateNumberOfCards(getCards(input)));

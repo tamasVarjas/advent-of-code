@@ -1,4 +1,4 @@
-package com.broomington;
+package com.broomington.twentytwentythree;
 
 import com.broomington.util.Part;
 
@@ -17,7 +17,7 @@ public class Day6 {
     private static final String NOT_NUMBERS = "\\D+";
 
     public static void main(final String[] args) throws IOException {
-        final String input = getInput(Day6.class);
+        final String input = getInput(2023, Day6.class);
 
         System.out.println(getNrOfWinOptions(input, Part.ONE));
         System.out.println(getNrOfWinOptions(input, Part.TWO));

@@ -1,4 +1,4 @@
-package com.broomington;
+package com.broomington.twentytwentythree;
 
 import com.broomington.util.Part;
 
@@ -15,7 +15,7 @@ public class Day2 {
     public static final int MAX_GREEN = 13;
 
     public static void main(final String[] args) throws IOException {
-        final String input = getInput(Day2.class);
+        final String input = getInput(2023, Day2.class);
 
         System.out.println(getSumOfPossibleGameIds(input, Part.ONE));
         System.out.println(getSumOfPossibleGameIds(input, Part.TWO));

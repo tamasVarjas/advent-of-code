@@ -1,4 +1,4 @@
-package com.broomington;
+package com.broomington.twentytwentythree;
 
 import com.broomington.util.Part;
 
@@ -12,7 +12,7 @@ import static java.lang.String.format;
 public class Day1 {
 
     public static void main(final String[] args) throws IOException {
-        final String input = getInput(Day1.class);
+        final String input = getInput(2023, Day1.class);
 
         System.out.println(getSum(input, Part.ONE));
         System.out.println(getSum(input, Part.TWO));

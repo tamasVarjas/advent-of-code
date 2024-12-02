@@ -1,4 +1,4 @@
-package com.broomington;
+package com.broomington.twentytwentythree;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -10,7 +10,7 @@ import static com.broomington.util.FileReader.getInput;
 public class Day8 {
 
     public static void main(final String[] args) throws IOException {
-        final String input = getInput(Day8.class);
+        final String input = getInput(2023, Day8.class);
 
         System.out.println(countSteps(input));
     }
