@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82d1f70a-8356-4b07-a70c-d814d6eef47d" name="Changes" comment="Day8-Part1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/broomington/twentytwentyfour/Day3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/2024/Day3-input.txt" afterDir="false" />
+    <list default="true" id="82d1f70a-8356-4b07-a70c-d814d6eef47d" name="Changes" comment="2024 Day 3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/broomington/twentytwentyfour/Day4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/2024/Day4.input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,6 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
@@ -219,7 +218,7 @@
       <workItem from="1703091803341" duration="11000" />
       <workItem from="1703091833502" duration="4000" />
       <workItem from="1733129398217" duration="13765000" />
-      <workItem from="1733214451570" duration="5770000" />
+      <workItem from="1733214451570" duration="7805000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -349,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702943812384</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="2024 Day 3">
+      <option name="closed" value="true" />
+      <created>1733228143965</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1733228143965</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +383,8 @@
     <MESSAGE value="Day6" />
     <MESSAGE value="Day4" />
     <MESSAGE value="Day8-Part1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day8-Part1" />
+    <MESSAGE value="2024 Day 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024 Day 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
