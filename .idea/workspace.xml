@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82d1f70a-8356-4b07-a70c-d814d6eef47d" name="Changes" comment="2024 Day 3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/broomington/twentytwentyfour/Day4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/2024/Day4.input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/broomington/twentytwentyfour/Day4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/broomington/twentytwentyfour/Day4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +91,7 @@
     "Gradle.advent-of-code [:com.broomington.twentytwentyfour.Day1.main()].executor": "Run",
     "Gradle.advent-of-code [:com.broomington.twentytwentyfour.Day2.main()].executor": "Run",
     "Gradle.advent-of-code [:com.broomington.twentytwentyfour.Day3.main()].executor": "Run",
+    "Gradle.advent-of-code [:com.broomington.twentytwentyfour.Day4.main()].executor": "Run",
     "Gradle.advent-of-code [:com.broomington.twentytwentythree.Day1.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -114,26 +115,13 @@
       <recent name="C:\Users\TamasVarjas\IdeaProjects\advent-of-code\src\main\resources\2023" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day3">
+  <component name="RunManager" selected="Application.com.broomington.twentytwentyfour.Day4">
     <configuration name="Day3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.broomington.twentytwentyfour.Day3" />
       <module name="advent-of-code.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.broomington.twentytwentyfour.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.broomington.twentytwentythree.Day4" />
-      <module name="advent-of-code.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.broomington.twentytwentythree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,30 +168,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.broomington.twentytwentyfour.Day4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.broomington.twentytwentyfour.Day4" />
+      <module name="advent-of-code.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.broomington.twentytwentyfour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.com.broomington.twentytwentyfour.Day4" />
       <item itemvalue="Application.Day3" />
       <item itemvalue="Application.com.broomington.twentytwentyfour.Day1" />
       <item itemvalue="Application.com.broomington.twentytwentyfour.Day2" />
       <item itemvalue="Application.Day8" />
-      <item itemvalue="Application.Day4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.broomington.twentytwentyfour.Day4" />
         <item itemvalue="Application.Day3" />
         <item itemvalue="Application.com.broomington.twentytwentyfour.Day2" />
         <item itemvalue="Application.com.broomington.twentytwentyfour.Day1" />
         <item itemvalue="Application.Day8" />
-        <item itemvalue="Application.Day4" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

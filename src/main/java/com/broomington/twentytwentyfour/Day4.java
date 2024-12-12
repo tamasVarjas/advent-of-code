@@ -7,14 +7,12 @@ import java.util.Objects;
 import java.util.Set;
 
 import static com.broomington.util.FileReader.getInput;
+import static java.util.stream.Collectors.toUnmodifiableSet;
 
 public class Day4 {
 
     private static final Set<Word> WORDS = new HashSet<>();
-    private static final Set<Word> HORIZONTAL_WORDS = new HashSet<>();
-    private static final Set<Word> VERTICAL_WORDS = new HashSet<>();
-    private static final Set<Word> DIAG_1_WORDS = new HashSet<>();
-    private static final Set<Word> DIAG_2_WORDS = new HashSet<>();
+    private static final Set<Word> X_WORDS = new HashSet<>();
 
     public static void main(final String[] args) throws IOException {
         final String input = getInput(2024, Day4.class);
@@ -57,6 +55,28 @@ public class Day4 {
 //        printResults(WORDS, wordSearch);
 
         System.out.println(WORDS.size());
+
+        for (int r = 0; r < numOfRows; r++) {
+            for (int c = 0; c < numOfColumns; c++) {
+                try {
+                    final Coordinate coor = new Coordinate(r, c);
+                    isHitDiagDnFwdMas(wordSearch, wordSearch[r][c], coor);
+                    isHitDiagUpFwdMas(wordSearch, wordSearch[r][c], coor);
+                    isHitDiagUpBwdMas(wordSearch, wordSearch[r][c], coor);
+                    isHitDiagDnBwdMas(wordSearch, wordSearch[r][c], coor);
+                } catch (final ArrayIndexOutOfBoundsException e) {
+                    // move on
+                }
+            }
+        }
+
+        final Set<Word> x = X_WORDS.stream()
+                .flatMap(word -> X_WORDS.stream()
+                        .filter(w -> !w.equals(word) && w.a.equals(word.a))
+                )
+                .collect(toUnmodifiableSet());
+
+        System.out.println(x.size() / 2);
     }
 
     private static void printWordSearch(final char[][] wordSearch) {
@@ -263,6 +283,118 @@ public class Day4 {
         }
     }
 
+    private static void isHitDiagDnFwdMas(final char[][] wS, final char ch, final Coordinate coord) {
+        try {
+            if (ch == 'M') {
+                if (wS[coord.r + 1][coord.c + 1] == 'A' && wS[coord.r + 2][coord.c + 2] == 'S') {
+                    final Coordinate a = new Coordinate(coord.r + 1, coord.c + 1);
+                    final Word word = new Word(coord, a, new Coordinate(coord.r + 2, coord.c + 2));
+                    word.a = a;
+                    X_WORDS.add(word);
+                }
+            } else if (ch == 'A') {
+                if (wS[coord.r - 1][coord.c - 1] == 'M' && wS[coord.r + 1][coord.c + 1] == 'S') {
+                    final Word word = new Word(new Coordinate(coord.r - 1, coord.c - 1), coord, new Coordinate(coord.r + 1, coord.c + 1));
+                    word.a = coord;
+                    X_WORDS.add(word);
+                }
+            } else if (ch == 'S') {
+                if (wS[coord.r - 2][coord.c - 2] == 'M' && wS[coord.r - 1][coord.c - 1] == 'A') {
+                    final Coordinate a = new Coordinate(coord.r - 1, coord.c - 1);
+                    final Word word = new Word(new Coordinate(coord.r - 2, coord.c - 2), a, coord);
+                    word.a = a;
+                    X_WORDS.add(word);
+                }
+            }
+        } catch (final ArrayIndexOutOfBoundsException e) {
+            // move on
+        }
+    }
+
+    private static void isHitDiagUpFwdMas(final char[][] wS, final char ch, final Coordinate coord) {
+        try {
+            if (ch == 'M') {
+                if (wS[coord.r - 1][coord.c + 1] == 'A' && wS[coord.r - 2][coord.c + 2] == 'S') {
+                    final Coordinate a = new Coordinate(coord.r - 1, coord.c + 1);
+                    final Word word = new Word(coord, a, new Coordinate(coord.r - 2, coord.c + 2));
+                    word.a = a;
+                    X_WORDS.add(word);
+                }
+            } else if (ch == 'A') {
+                if (wS[coord.r + 1][coord.c - 1] == 'M' && wS[coord.r - 1][coord.c + 1] == 'S') {
+                    final Word word = new Word(new Coordinate(coord.r + 1, coord.c - 1), coord, new Coordinate(coord.r - 1, coord.c + 1));
+                    word.a = coord;
+                    X_WORDS.add(word);
+                }
+            } else if (ch == 'S') {
+                if (wS[coord.r + 2][coord.c - 2] == 'M' && wS[coord.r + 1][coord.c - 1] == 'A') {
+                    final Coordinate a = new Coordinate(coord.r + 1, coord.c - 1);
+                    final Word word = new Word(new Coordinate(coord.r + 2, coord.c - 2), a, coord);
+                    word.a = a;
+                    X_WORDS.add(word);
+                }
+            }
+        } catch (final ArrayIndexOutOfBoundsException e) {
+            // move on
+        }
+    }
+
+    private static void isHitDiagUpBwdMas(final char[][] wS, final char ch, final Coordinate coord) {
+        try {
+            if (ch == 'M') {
+                if (wS[coord.r - 1][coord.c - 1] == 'A' && wS[coord.r - 2][coord.c - 2] == 'S') {
+                    final Coordinate a = new Coordinate(coord.r - 1, coord.c - 1);
+                    final Word word = new Word(coord, a, new Coordinate(coord.r - 2, coord.c - 2));
+                    word.a = a;
+                    X_WORDS.add(word);
+                }
+            } else if (ch == 'A') {
+                if (wS[coord.r + 1][coord.c + 1] == 'M' && wS[coord.r - 1][coord.c - 1] == 'S') {
+                    final Word word = new Word(new Coordinate(coord.r + 1, coord.c + 1), coord, new Coordinate(coord.r - 1, coord.c - 1));
+                    word.a = coord;
+                    X_WORDS.add(word);
+                }
+            } else if (ch == 'S') {
+                if (wS[coord.r + 2][coord.c + 2] == 'M' && wS[coord.r + 1][coord.c + 1] == 'A') {
+                    final Coordinate a = new Coordinate(coord.r + 1, coord.c + 1);
+                    final Word word = new Word(new Coordinate(coord.r + 2, coord.c + 2), a, coord);
+                    word.a = a;
+                    X_WORDS.add(word);
+                }
+            }
+        } catch (final ArrayIndexOutOfBoundsException e) {
+            // move on
+        }
+    }
+
+    private static void isHitDiagDnBwdMas(final char[][] wS, final char ch, final Coordinate coord) {
+        try {
+            if (ch == 'M') {
+                if (wS[coord.r + 1][coord.c - 1] == 'A' && wS[coord.r + 2][coord.c - 2] == 'S') {
+                    final Coordinate a = new Coordinate(coord.r + 1, coord.c - 1);
+                    final Word word = new Word(coord, a, new Coordinate(coord.r + 2, coord.c - 2));
+                    word.a = a;
+                    X_WORDS.add(word);
+                }
+            } else if (ch == 'A') {
+                if (wS[coord.r - 1][coord.c + 1] == 'M' && wS[coord.r + 1][coord.c - 1] == 'S') {
+                    final Word word = new Word(new Coordinate(coord.r - 1, coord.c + 1), coord, new Coordinate(coord.r + 1, coord.c - 1));
+                    word.a = coord;
+                    X_WORDS.add(word);
+                }
+            } else if (ch == 'S') {
+                if (wS[coord.r - 2][coord.c + 2] == 'M' && wS[coord.r - 1][coord.c + 1] == 'A') {
+                    final Coordinate a = new Coordinate(coord.r - 1, coord.c + 1);
+                    final Word word = new Word(new Coordinate(coord.r - 2, coord.c + 2), a, coord);
+                    word.a = a;
+                    X_WORDS.add(word);
+                }
+            }
+        } catch (final ArrayIndexOutOfBoundsException e) {
+            // move on
+        }
+    }
+
     private static void printResults(final Set<Word> words, final char[][] ws) {
         for (final Word word : words) {
             for (final Coordinate coordinate : word.coordinates) {
@@ -297,7 +429,16 @@ public class Day4 {
 
     private static class Word {
 
-        private final Set<Coordinate> coordinates;
+        final Set<Coordinate> coordinates;
+        Coordinate a;
+
+        public Word(final Coordinate first, final Coordinate second, final Coordinate third) {
+            final Set<Coordinate> coords = new HashSet<>();
+            coords.add(first);
+            coords.add(second);
+            coords.add(third);
+            this.coordinates = Collections.unmodifiableSet(coords);
+        }
 
         public Word(final Coordinate first, final Coordinate second, final Coordinate third, final Coordinate fourth) {
             final Set<Coordinate> coords = new HashSet<>();
