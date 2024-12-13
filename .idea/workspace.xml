@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82d1f70a-8356-4b07-a70c-d814d6eef47d" name="Changes" comment="2024 Day 3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/broomington/twentytwentyfour/Day4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/broomington/twentytwentyfour/Day4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/broomington/twentytwentyfour/Day5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/2024/Day5-input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +92,7 @@
     "Gradle.advent-of-code [:com.broomington.twentytwentyfour.Day2.main()].executor": "Run",
     "Gradle.advent-of-code [:com.broomington.twentytwentyfour.Day3.main()].executor": "Run",
     "Gradle.advent-of-code [:com.broomington.twentytwentyfour.Day4.main()].executor": "Run",
+    "Gradle.advent-of-code [:com.broomington.twentytwentyfour.Day5.main()].executor": "Run",
     "Gradle.advent-of-code [:com.broomington.twentytwentythree.Day1.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -115,7 +116,7 @@
       <recent name="C:\Users\TamasVarjas\IdeaProjects\advent-of-code\src\main\resources\2023" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.broomington.twentytwentyfour.Day4">
+  <component name="RunManager" selected="Application.Day5">
     <configuration name="Day3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.broomington.twentytwentyfour.Day3" />
       <module name="advent-of-code.main" />
@@ -129,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.broomington.twentytwentythree.Day8" />
+    <configuration name="Day5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.broomington.twentytwentyfour.Day5" />
       <module name="advent-of-code.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.broomington.twentytwentythree.*" />
+          <option name="PATTERN" value="com.broomington.twentytwentyfour.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -181,20 +182,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Application.Day5" />
       <item itemvalue="Application.com.broomington.twentytwentyfour.Day4" />
       <item itemvalue="Application.Day3" />
       <item itemvalue="Application.com.broomington.twentytwentyfour.Day1" />
       <item itemvalue="Application.com.broomington.twentytwentyfour.Day2" />
-      <item itemvalue="Application.Day8" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Day5" />
         <item itemvalue="Application.com.broomington.twentytwentyfour.Day4" />
         <item itemvalue="Application.Day3" />
         <item itemvalue="Application.com.broomington.twentytwentyfour.Day2" />
         <item itemvalue="Application.com.broomington.twentytwentyfour.Day1" />
-        <item itemvalue="Application.Day8" />
       </list>
     </recent_temporary>
   </component>
