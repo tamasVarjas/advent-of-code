@@ -2,10 +2,7 @@ package com.broomington.twentytwentyfive;
 
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import static com.broomington.util.FileReader.getInput;
 import static java.util.Comparator.comparingLong;
